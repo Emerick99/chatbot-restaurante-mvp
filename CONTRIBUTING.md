@@ -1,36 +1,22 @@
 # Guía de contribución
 
-
-
 ## Propósito
-
-
 
 Este documento define el modelo de ramas y las reglas de trabajo utilizadas
 
 en el proyecto Chatbot de Pedidos para Restaurante.
 
-
-
 Todo cambio debe comenzar con un issue, desarrollarse en una rama de trabajo
 
 y ser integrado mediante un Pull Request.
 
-
-
 ## Modelo de ramas
 
-
-
 ### `main`
-
-
 
 Es la rama estable y entregable del proyecto.
 
 La rama `main` debe configurarse como rama protegida en GitHub.
-
-
 
 - No se permiten commits directos.
 
@@ -40,8 +26,6 @@ La rama `main` debe configurarse como rama protegida en GitHub.
 
 - Debe contener únicamente versiones funcionales.
 
-
-
 > Excepción de inicialización: el repositorio contiene un único commit raíz
 
 > técnico y vacío, necesario para establecer las ramas base. Este commit no
@@ -50,15 +34,9 @@ La rama `main` debe configurarse como rama protegida en GitHub.
 
 > puede realizarse directamente sobre `main`.
 
-
-
 ### `develop`
 
-
-
 Es la rama de integración del proyecto.
-
-
 
 - Recibe los cambios terminados desde las ramas de trabajo.
 
@@ -68,27 +46,17 @@ Es la rama de integración del proyecto.
 
 - Sirve como base para crear nuevas ramas de trabajo.
 
-
-
 Cuando `develop` contiene una versión estable y verificada, se abre un Pull
 
 Request desde `develop` hacia `main`. No se realizan merges directos ni
 
 commits manuales sobre `main`.
 
-
-
 ## Ramas de trabajo
-
-
 
 Cada tarea debe desarrollarse en una rama propia creada desde `develop`.
 
-
-
 La convención de nombres es:
-
-
 
 ```text
 
@@ -96,11 +64,7 @@ tipo/NN-descripcion-corta
 
 ```
 
-
-
 Donde:
-
-
 
 - `tipo` puede ser `feature`, `fix` o `docs`.
 
@@ -108,11 +72,7 @@ Donde:
 
 - `descripcion-corta` resume el objetivo de la tarea.
 
-
-
 Ejemplos:
-
-
 
 ```text
 
@@ -124,19 +84,11 @@ docs/01-modelo-ramas
 
 ```
 
-
-
 Las ramas de trabajo se eliminan después de fusionarse.
-
-
 
 ## Requisitos de los issues
 
-
-
 Cada issue debe incluir:
-
-
 
 - Un título accionable redactado como verbo más objeto.
 
@@ -154,21 +106,13 @@ Cada issue debe incluir:
 
 - Un Pull Request vinculado mediante `Closes #NN`.
 
-
-
 Los issues deben cerrarse automáticamente mediante el merge del Pull Request
 
 asociado y nunca de forma manual.
 
-
-
 ## Flujo de trabajo por issue
 
-
-
 Cada cambio debe seguir este orden:
-
-
 
 1. Crear un issue antes de comenzar el trabajo.
 
@@ -194,23 +138,13 @@ Cada cambio debe seguir este orden:
 
 12. Eliminar la rama de trabajo después del merge.
 
-
-
 Los issues no deben cerrarse manualmente. Su cierre debe producirse mediante el merge del Pull Request asociado.
-
-
 
 ## Convención de commits
 
-
-
 Los mensajes de los commits deben ser breves, claros y describir el cambio realizado.
 
-
-
 Se utilizarán los siguientes prefijos:
-
-
 
 - `feat:` para nuevas funcionalidades.
 
@@ -222,11 +156,7 @@ Se utilizarán los siguientes prefijos:
 
 - `test:` para agregar o modificar pruebas.
 
-
-
 Ejemplos:
-
-
 
 ```text
 
@@ -242,19 +172,11 @@ test: agregar pruebas de validación de stock
 
 ```
 
-
-
 ## Pull Requests y revisión
-
-
 
 Todo cambio debe integrarse mediante un Pull Request.
 
-
-
 Cada Pull Request debe incluir:
-
-
 
 - Una explicación de qué cambia.
 
@@ -268,16 +190,10 @@ Cada Pull Request debe incluir:
 
 - Una checklist de revisión completada por el autor.
 
-
-
 El tamaño de cada Pull Request debe mantenerse acotado, procurando no superar
 
 aproximadamente quince archivos modificados.
 
-
-
 Como el proyecto es individual, el autor también realiza la revisión del cambio antes del merge.
-
-
 
 El merge se realiza mediante **Squash and merge**, utilizando un mensaje limpio y descriptivo.
