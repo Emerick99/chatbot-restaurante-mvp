@@ -27,6 +27,8 @@
 
 | 2026-07-29 | Issue #13 / PR #26 | Diseñar la máquina de estados. | Un modelo con once estados, tabla y diagrama. | Se contrastó con el Issue #13, el enunciado y `docs/requisitos.md`. | Se definieron actores, condiciones, estados finales, cancelación, incidencias e idempotencia; la pérdida de señal quedó como indicador, no como estado. |
 
+| 2026-07-29 | Issue #14 / PR #27 | Documentar el flujo conversacional. | Flujos del cliente y repartidor con decisiones y diagrama. | Se contrastó con el Issue #14, `docs/requisitos.md` y la máquina de estados. | Se separaron conversación y pedido; se precisaron ubicación nativa y en vivo, cancelación, reinicio, reasignación, errores e idempotencia. |
+
 ## Alcance de la asistencia de IA
 
 ChatGPT Codex ayudó a interpretar el enunciado, planificar tareas, revisar criterios y redactar o corregir documentación. Mediante el conector autorizado también ejecutó comentarios, asignaciones, ramas, cambios de archivos, Pull Requests y fusiones solicitadas hacia `develop`.
