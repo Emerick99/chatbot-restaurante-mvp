@@ -4,23 +4,32 @@
 
 - ChatGPT, de OpenAI: utilizado como apoyo para interpretar el enunciado, revisar la estructura de issues y Pull Requests, orientar el uso de Git y GitHub, y proponer borradores de documentación en Markdown.
 
+- ChatGPT Codex y su conector de GitHub: utilizados con autorización del postulante para revisar el repositorio y ejecutar comentarios, asignaciones, ramas, cambios documentales, Pull Requests y fusiones hacia `develop`.
+
 ## Registro cronológico
 
 | Fecha | Issue / PR | Para qué se usó | Qué devolvió | Cómo se verificó | Qué se modificó |
 |---|---|---|---|---|---|
-| 2026-07-29 | Issue #1 / PR #2 / PR #17 | Revisar los requisitos del modelo de ramas y apoyar la elaboración de `CONTRIBUTING.md`. | Una propuesta de flujo con `main`, `develop` y ramas de trabajo asociadas a issues. | Se comparó la propuesta con el Bloque A del enunciado y se verificó el flujo resultante en GitHub. | Se adaptó el flujo al carácter individual del examen y no se aplicaron fork, repositorio `upstream` ni revisión externa. |
-| 2026-07-29 | Issue #3 / PR #4 / PR #17 | Apoyar la definición de la plantilla estándar para Pull Requests. | Una estructura con las secciones qué cambia, por qué se realiza, cómo probarlo, issues relacionados, tipo de cambio, checklist y evidencia. | Se contrastó con los requisitos obligatorios del Pull Request indicados en el enunciado. | Se ajustó la plantilla al proyecto individual y se estableció el uso de `Closes #NN` para vincular y cerrar issues mediante el merge correspondiente. |
-| 2026-07-29 | Issues #1 y #3 / PR #17 | Orientar la configuración inicial de GitHub Projects y la protección de ramas. | Una propuesta de flujo entre los estados `Todo`, `In Progress` y `Done`, junto con reglas para evitar cambios directos. | Se comprobó en GitHub que los issues fueran cerrados por el PR y que las tarjetas reflejaran el movimiento real. | Se desactivó la automatización que cerraba issues al moverlos a `Done` y se dejó que el cierre ocurriera mediante el Pull Request. |
-| 2026-07-29 | Issue #5 | Revisar la estructura del issue y preparar el contenido inicial de `docs/uso-ia.md`. | Una plantilla con herramientas utilizadas, tabla cronológica, sección sobre uso no realizado y declaración de comprensión. | Se comparó cada sección y columna con el formato exigido expresamente por el enunciado. | Se reemplazaron los ejemplos genéricos por actividades reales realizadas en este repositorio. |
-| 2026-07-29 | Issue #5 / PR #18 | Preparar y revisar el Pull Request del registro inicial de uso de IA. | Una propuesta de título, descripción, pasos de comprobación y checklist para el PR. | Se revisó el contenido según el alcance documental del issue y se comprobó su visualización en GitHub. | Se dejaron sin marcar las casillas correspondientes a código y pruebas porque no aplican a un cambio exclusivamente documental. También se eliminaron caracteres de escape que impedían que GitHub interpretara correctamente el formato Markdown. |
-| 2026-07-29 | Issue #6 / PR #19 | Revisar la declaración de autoría, comprobar sus criterios y preparar el Pull Request. | Una verificación de cobertura del documento y una propuesta de PR vinculada al issue. | Se contrastó el archivo con cada criterio de aceptación del Issue #6 y se comprobó que la rama solo estuviera un commit por delante de `develop`. | Se conservaron el nombre y la asignatura reales, se limitó el cambio al alcance documental y se abrió el PR en borrador contra `develop`, sin fusionarlo. |
-| 2026-07-29 | Issue #7 / PR #20 | Estructurar y revisar el alcance, los componentes y los actores del sistema para `docs/requisitos.md`. | Una propuesta organizada con objetivo, alcance del bot y panel, integración, responsabilidades y límites iniciales. | Se contrastó cada sección con los criterios de aceptación del Issue #7 y con las funciones obligatorias del bot y del panel. | No se realizaron entrevistas ni conversaciones con repartidores reales. Se limitó el documento al MVP y se redactó que el sistema operará con uno o dos repartidores registrados, manteniendo un único repartidor activo por pedido para evitar asignaciones inconsistentes. |
+| 2026-07-29 | Issue #1 / PR #2 / PR #17 | Definir el flujo de ramas. | Una propuesta con `main`, `develop` y ramas por issue. | Se comparó con el Bloque A y se comprobó en GitHub. | Se adaptó al carácter individual del proyecto. |
+| 2026-07-29 | Issue #3 / PR #4 / PR #17 | Preparar la plantilla de PR. | Una plantilla con descripción, prueba, issue, checklist y evidencia. | Se contrastó con el enunciado. | Se incorporó `Closes #NN` y se ajustó la checklist. |
+| 2026-07-29 | Issues #1 y #3 / PR #17 | Orientar Projects y la protección de ramas. | Un flujo `Todo → In Progress → Done` y reglas de protección. | Se revisaron el tablero y los cierres en GitHub. | Se dejó el cierre de issues exclusivamente a los PR. |
+| 2026-07-29 | Issue #5 | Crear el registro de IA. | La estructura de herramientas, tabla, exclusiones y declaración. | Se comparó con el formato obligatorio. | Se reemplazaron ejemplos por actividades reales. |
+| 2026-07-29 | Issue #5 / PR #18 | Preparar y revisar el PR. | Título, descripción, prueba y checklist. | Se revisaron el alcance y el Markdown. | Se corrigió el formato y se marcaron solo casillas aplicables. |
+| 2026-07-29 | Issue #6 / PR #19 | Revisar la declaración de autoría. | Verificación de criterios y propuesta de PR. | Se comparó con el Issue #6. | Se añadió el registro del PR y se mantuvieron los datos aportados por el postulante. |
+| 2026-07-29 | Issue #7 / PR #20 | Documentar alcance y actores. | Objetivo, componentes, responsabilidades y límites del MVP. | Se comparó con el Issue #7. | El postulante pidió corregir una frase ambigua sobre repartidores y registrar solo cambios reales; se aplicó. |
+| 2026-07-29 | Issue #8 / PR #21 | Redactar historias del cliente. | Doce historias con criterios verificables. | Se compararon con el Issue #8. | El postulante pidió declarar toda la ayuda de Codex, eliminar información ajena a esta columna y resumir el registro; se aplicaron esos cambios. |
+
+## Alcance de la asistencia de IA
+
+ChatGPT Codex ayudó a interpretar el enunciado, planificar tareas, revisar criterios y redactar o corregir documentación. Mediante el conector autorizado también ejecutó comentarios, asignaciones, ramas, cambios de archivos, Pull Requests y fusiones solicitadas hacia `develop`.
+
+El postulante indicó las acciones, realizó observaciones y conserva la responsabilidad de revisar, comprender y defender el contenido.
 
 ## Dónde NO se usó IA
 
-Hasta la creación de este documento todavía no se ha implementado código funcional del bot de Telegram, del panel de administración ni del modelo de base de datos. Por tanto, no existe código de esos componentes que pueda atribuirse al uso de IA.
+La cuenta de GitHub, el repositorio y los comandos iniciales de Git Bash fueron creados o ejecutados manualmente por el postulante.
 
-La creación de la cuenta y del repositorio, la ejecución de los comandos en Git Bash, las operaciones realizadas en GitHub y la comprobación visual de sus resultados fueron realizadas manualmente por el postulante.
+Hasta esta actualización no se implementó código funcional del bot, del panel ni de la base de datos.
 
 ## Declaración
 
