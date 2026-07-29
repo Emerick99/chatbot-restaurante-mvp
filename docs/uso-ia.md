@@ -31,6 +31,8 @@
 
 | 2026-07-29 | Issue #15 / PR #28 | Crear el diagrama de casos de uso. | Un diagrama con tres actores y veintiún casos de uso. | Se contrastó con el Issue #15 y `docs/requisitos.md`. | Se agruparon las funciones por actor, se marcó el límite del sistema y se añadieron reglas de acceso y trazabilidad. |
 
+| 2026-07-29 | Issue #16 / PR #29 | Diseñar el modelo entidad-relación. | Dieciséis entidades con claves, cardinalidades y diagrama. | Se contrastó con el Issue #16, los requisitos y la máquina de estados. | Se normalizaron los perfiles, se conservaron precios históricos y se separaron asignaciones, rastros, pagos y eventos de entrega. |
+
 ## Alcance de la asistencia de IA
 
 ChatGPT Codex ayudó a interpretar el enunciado, planificar tareas, revisar criterios y redactar o corregir documentación. Mediante el conector autorizado también ejecutó comentarios, asignaciones, ramas, cambios de archivos, Pull Requests y fusiones solicitadas hacia `develop`.
