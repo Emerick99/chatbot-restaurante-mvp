@@ -18,7 +18,7 @@
 | 2026-07-29 | Issue #6 / PR #19 | Revisar la declaración de autoría. | Verificación de criterios y propuesta de PR. | Se comparó con el Issue #6. | Se añadió el registro del PR y se mantuvieron los datos aportados por el postulante. |
 | 2026-07-29 | Issue #7 / PR #20 | Documentar alcance y actores. | Objetivo, componentes, responsabilidades y límites del MVP. | Se comparó con el Issue #7. | El postulante pidió corregir una frase ambigua sobre repartidores y registrar solo cambios reales; se aplicó. |
 | 2026-07-29 | Issue #8 / PR #21 | Redactar historias del cliente. | Doce historias con criterios verificables. | Se compararon con el Issue #8. | El postulante pidió declarar toda la ayuda de Codex, eliminar información ajena a esta columna y resumir el registro; se aplicaron esos cambios. |
-| 2026-07-29 | Issue #9 | Redactar historias del repartidor. | Once historias con criterios verificables. | Se compararon con el Issue #9. | Se añadió la sección del repartidor y se diferenciaron recepción, llegada y entrega. |
+| 2026-07-29 | Issue #9 / PR #22 | Redactar historias del repartidor. | Once historias con criterios verificables. | Se compararon con el Issue #9. | Se añadió la sección del repartidor y se diferenciaron recepción, llegada y entrega. |
 
 ## Alcance de la asistencia de IA
 
