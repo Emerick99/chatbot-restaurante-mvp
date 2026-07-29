@@ -32,6 +32,7 @@
 | 2026-07-29 | Issue #36 / PR #37 | Configurar CMake para C++17. | Una configuración con Drogon, tgbot-cpp, advertencias y CTest. | El postulante ejecutó configuración y compilación en MSYS2 UCRT64; ambas terminaron correctamente. | Se mantuvo CTest habilitado sin casos; las pruebas se reservaron para el Issue #44. |
 | 2026-07-29 | Issue #43 / PR #93 | Implementar estados y transiciones del pedido. | Un modelo C++17 compartido con once estados y quince eventos. | Se contrastó con la máquina documentada y se compiló con advertencias estrictas. | Se añadieron conversión estable, cancelación, incidencia recuperable y rechazo sin cambios. |
 | 2026-07-29 | Issue #38 / PR #94 | Cargar configuración desde el entorno. | Un lector C++17 para siete variables y un puerto validado. | Se compiló con advertencias estrictas y se probaron ausencias, vacíos y límites. | Se rechazaron configuraciones inválidas sin exponer sus valores. |
+| 2026-07-29 | Issue #39 / PR #95 | Verificar la carga de configuración. | Una prueba C++17 integrada con CTest. | El postulante compiló y ejecutó CTest en MSYS2 UCRT64; aprobó 1 de 1. | Se cubrieron configuración completa, variable ausente, puertos inválidos y errores sin secretos. |
 
 ## Alcance de la asistencia de IA
 
