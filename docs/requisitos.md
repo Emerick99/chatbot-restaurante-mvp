@@ -405,3 +405,148 @@ Como repartidor, quiero confirmar la entrega adjuntando evidencia, para dejar co
 - Al confirmar la entrega, el panel se actualiza y el cliente recibe la notificación diferenciada `Pedido entregado`.
 - Una entrega ya confirmada no puede registrarse nuevamente.
 
+## 8. Historias de usuario del administrador
+
+### HU-ADM-01. Acceder de forma segura al panel
+
+Como administrador, quiero autenticarme de forma segura, para impedir el acceso no autorizado a la gestión del restaurante.
+
+#### Criterios de aceptación
+
+- El panel permite iniciar sesión únicamente con credenciales válidas.
+- Las contraseñas se almacenan mediante hash y no se muestran en respuestas ni registros.
+- Un intento con credenciales inválidas muestra un error sin revelar cuál dato falló.
+- Todas las rutas internas rechazan o redirigen a quien no tenga una sesión válida.
+- Al cerrar sesión o expirar la sesión, el acceso interno vuelve a requerir autenticación.
+
+### HU-ADM-02. Gestionar los platos
+
+Como administrador, quiero crear, consultar, editar y eliminar platos, para mantener actualizado el catálogo del restaurante.
+
+#### Criterios de aceptación
+
+- El administrador puede crear un plato con sus datos obligatorios y un precio mayor que cero.
+- El panel lista los platos registrados con su precio, disponibilidad y stock.
+- La edición persiste los cambios y los muestra al volver a consultar el plato.
+- Al eliminar un plato, deja de aparecer en el catálogo operativo y en menús futuros sin alterar pedidos históricos.
+- Los datos inválidos se rechazan con un mensaje y no generan cambios parciales.
+
+### HU-ADM-03. Configurar el menú por fecha
+
+Como administrador, quiero configurar los platos disponibles para cada fecha, para publicar el menú correspondiente al día de atención.
+
+#### Criterios de aceptación
+
+- El administrador puede asociar o retirar platos de una fecha seleccionada.
+- El bot muestra únicamente el menú configurado para la fecha actual.
+- Un cambio guardado en el panel se refleja en la siguiente consulta del menú desde el bot.
+- Un plato no asociado a la fecha actual no puede agregarse al carrito.
+- Si no existe menú para la fecha actual, el bot informa que no hay opciones disponibles.
+
+### HU-ADM-04. Controlar disponibilidad y stock
+
+Como administrador, quiero controlar la disponibilidad y el stock de los platos, para evitar pedidos que el restaurante no puede preparar.
+
+#### Criterios de aceptación
+
+- El administrador puede habilitar o deshabilitar un plato y registrar un stock entero no negativo.
+- El bot ofrece únicamente platos habilitados y con stock mayor que cero.
+- Al confirmarse un pedido, el stock de cada plato se descuenta exactamente una vez.
+- Cuando el stock llega a cero, el plato deja de aparecer en el menú del bot sin intervención manual.
+- Dos confirmaciones concurrentes no pueden producir stock negativo; si no alcanza, una operación se rechaza sin afectar a la otra.
+
+### HU-ADM-05. Administrar el tablero y los estados
+
+Como administrador, quiero consultar el tablero y cambiar el estado de los pedidos, para controlar su avance desde la recepción hasta la entrega.
+
+#### Criterios de aceptación
+
+- El tablero muestra para cada pedido su número, cliente, estado, pago y repartidor activo.
+- El administrador puede realizar únicamente cambios permitidos por el modelo de estados.
+- Una transición inválida se rechaza sin alterar el pedido.
+- Cada cambio registra el estado anterior, el nuevo estado, el administrador, la fecha y la hora.
+- El nuevo estado se refleja en el bot y genera la notificación correspondiente al cliente.
+
+### HU-ADM-06. Revisar y confirmar pagos manualmente
+
+Como administrador, quiero visualizar el comprobante y confirmar manualmente el pago, para validar que el pedido fue pagado antes de continuar.
+
+#### Criterios de aceptación
+
+- El panel permite abrir el comprobante asociado al pedido correcto.
+- La recepción del comprobante no marca automáticamente el pedido como pagado.
+- El administrador puede confirmar el pago o marcarlo como observado.
+- La decisión registra el administrador, la fecha y la hora y se refleja en el bot.
+- Una segunda confirmación del mismo pago no duplica eventos ni efectos.
+
+### HU-ADM-07. Asignar y reasignar repartidores
+
+Como administrador, quiero asignar o reasignar un repartidor registrado, para decidir quién realizará cada entrega.
+
+#### Criterios de aceptación
+
+- El pedido ofrece un selector con los repartidores registrados.
+- Al asignar, el pedido conserva un único repartidor activo y el bot le envía de inmediato el mensaje completo.
+- Al reasignar, el repartidor anterior pierde el acceso operativo al pedido.
+- El nuevo repartidor recibe el mensaje completo y el rastro no mezcla ubicaciones de ambos.
+- El historial registra quién asignó, el repartidor anterior, el nuevo repartidor, la fecha y la hora.
+
+### HU-ADM-08. Seguir la entrega en el mapa
+
+Como administrador, quiero visualizar al repartidor y el destino en un mapa, para supervisar el trayecto y reconocer su llegada.
+
+#### Criterios de aceptación
+
+- El mapa muestra la ubicación de destino y la última posición válida del repartidor asignado.
+- Durante el trayecto, el mapa se actualiza cada 15 segundos con la última `live location` recibida.
+- El panel muestra la hora de la última actualización y el estado de señal.
+- La confirmación de llegada aparece como un evento distinto de la entrega.
+- Una reasignación hace que el mapa continúe con la ubicación del nuevo repartidor sin mezclar rastros.
+
+### HU-ADM-09. Consultar la ficha y frecuencia del cliente
+
+Como administrador, quiero consultar la ficha y el historial de un cliente, para conocer su relación con el restaurante.
+
+#### Criterios de aceptación
+
+- La ficha muestra los datos registrados del cliente sin mezclar información de otros perfiles.
+- El historial lista sus pedidos en orden cronológico con fecha, total y estado.
+- La frecuencia se calcula con la cantidad de pedidos no cancelados dentro del período consultado.
+- El período utilizado y el total de pedidos considerados se muestran junto al resultado.
+- Los datos coinciden con los pedidos almacenados para ese cliente.
+
+### HU-ADM-10. Consultar las ventas del día
+
+Como administrador, quiero consultar las ventas del día, para conocer el resultado diario del restaurante.
+
+#### Criterios de aceptación
+
+- El reporte utiliza la fecha local seleccionada y muestra la cantidad de pedidos con pago confirmado.
+- El total de ventas es la suma de los importes de esos pedidos.
+- Los pedidos pendientes, observados o cancelados no se incluyen como ventas.
+- El reporte evita contar dos veces un mismo pedido.
+- La cantidad y el total coinciden con los registros de la base de datos.
+
+### HU-ADM-11. Consultar los platos más pedidos
+
+Como administrador, quiero consultar los platos más pedidos, para identificar las preferencias de los clientes.
+
+#### Criterios de aceptación
+
+- El reporte suma las cantidades vendidas de cada plato durante el período seleccionado.
+- Solo considera pedidos con pago confirmado y excluye los cancelados.
+- Los platos se ordenan de mayor a menor cantidad vendida.
+- El reporte muestra el período y la cantidad total de cada plato.
+- Los resultados coinciden con el detalle de los pedidos almacenados.
+
+### HU-ADM-12. Consultar el tiempo promedio de entrega
+
+Como administrador, quiero consultar el tiempo promedio de entrega, para evaluar la duración de los repartos completados.
+
+#### Criterios de aceptación
+
+- El tiempo de cada entrega se calcula desde el evento `En camino` hasta el evento `Entregado`.
+- El promedio considera únicamente pedidos entregados dentro del período seleccionado.
+- El resultado se muestra en minutos junto con la cantidad de entregas consideradas.
+- Un pedido sin ambos eventos no altera el promedio.
+- Si no existen entregas válidas, el panel informa que no hay datos suficientes.
