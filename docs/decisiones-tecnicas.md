@@ -9,6 +9,7 @@ Este documento registra las decisiones técnicas del MVP, las alternativas consi
 Cada registro utiliza los mismos campos:
 
 - **Fecha:** día en que se adopta o revisa la decisión.
+- **Título de la decisión:** identificador y tema indicado en el encabezado de cada registro.
 - **Estado:** propuesta, aceptada, sustituida o descartada.
 - **Contexto o problema:** necesidad que origina la decisión.
 - **Alternativas evaluadas:** opciones consideradas y su diferencia principal.
@@ -108,7 +109,7 @@ El administrador necesita un panel web con autenticación, formularios CRUD, tab
 - **Drogon:** framework web C++ con rutas, filtros, sesiones, contenido estático y acceso a datos.
 - **Crow:** microframework C++ liviano, pero requeriría integrar más componentes para sesiones y persistencia.
 - **Aplicación de escritorio con Qt:** permitiría usar C++, pero no cumpliría el requisito de panel web.
-- **Flask:** simplificaría el panel, pero introduciría Python, que el postulante no confirmó poder defender.
+- **Flask:** simplificaría el panel, pero introduciría Python, que el postulante indicó que no podría defender con seguridad.
 
 ### Decisión adoptada
 
@@ -127,7 +128,7 @@ Drogon concentra las capacidades web necesarias en un framework C++ y permite co
 
 ### Desventajas o consecuencias
 
-- El equipo debe instalar y comprender un framework web C++.
+- El postulante debe instalar y comprender un framework web C++.
 - El mapa requiere JavaScript mínimo en el navegador.
 - La interfaz se limitará a lo necesario para el MVP; no se añadirá un framework SPA.
 
