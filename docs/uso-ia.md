@@ -21,6 +21,8 @@
 | 2026-07-29 | Issue #9 / PR #22 | Redactar y revisar historias del repartidor. | Once historias y observaciones sobre requisitos omitidos. | Se contrastaron con el Issue #9, el Bloque D y los libros base. | El postulante hizo notar que debían incorporarse los requisitos exactos; se precisaron mensaje completo, `Location`, acuse, reasignación, intervalo, pérdida de señal, evidencia y notificaciones. |
 | 2026-07-29 | Issue #10 / PR #23 | Redactar historias del administrador. | Doce historias con criterios verificables. | Se contrastaron con el Issue #10, el Bloque E y los libros base. | Se añadieron seguridad, CRUD, stock concurrente, tablero, pago, reparto, mapa, ficha de cliente y tres reportes. |
 
+| 2026-07-29 | Issue #11 / PR #24 | Registrar decisiones técnicas iniciales. | Seis decisiones con alternativas y consecuencias. | Se contrastaron con el Issue #11, el enunciado y la documentación oficial. | El postulante indicó que conoce C++ y no podría defender Python; se cambió la propuesta a C++17, Drogon, tgbot-cpp y SQLite3. |
+
 ## Alcance de la asistencia de IA
 
 ChatGPT Codex ayudó a interpretar el enunciado, planificar tareas, revisar criterios y redactar o corregir documentación. Mediante el conector autorizado también ejecutó comentarios, asignaciones, ramas, cambios de archivos, Pull Requests y fusiones solicitadas hacia `develop`.
