@@ -25,6 +25,8 @@
 
 | 2026-07-29 | Issue #12 / PR #25 | Crear el README inicial. | Un borrador con propósito, alcance, componentes, actores y enlaces. | Se contrastó con el Issue #12 y `docs/requisitos.md`. | Se resumió el alcance y se enlazó únicamente la documentación existente. |
 
+| 2026-07-29 | Issue #13 / PR #26 | Diseñar la máquina de estados. | Un modelo con once estados, tabla y diagrama. | Se contrastó con el Issue #13, el enunciado y `docs/requisitos.md`. | Se definieron actores, condiciones, estados finales, cancelación, incidencias e idempotencia; la pérdida de señal quedó como indicador, no como estado. |
+
 ## Alcance de la asistencia de IA
 
 ChatGPT Codex ayudó a interpretar el enunciado, planificar tareas, revisar criterios y redactar o corregir documentación. Mediante el conector autorizado también ejecutó comentarios, asignaciones, ramas, cambios de archivos, Pull Requests y fusiones solicitadas hacia `develop`.
