@@ -269,3 +269,135 @@ Como cliente, quiero recibir orientación ante entradas inválidas o fuera de co
 - Un comando global permitido, como ayuda o cancelación, funciona desde cualquier paso del flujo.
 - Después del error, el cliente puede continuar sin reiniciar obligatoriamente toda la conversación.
 
+## 7. Historias de usuario del repartidor
+
+### HU-REP-01. Identificarse y acceder según el rol
+
+Como repartidor, quiero autenticarme e identificarme mediante Telegram, para acceder únicamente a las funciones correspondientes a mi rol.
+
+#### Criterios de aceptación
+
+- El sistema reconoce como repartidor únicamente un chat_id previamente habilitado por el administrador.
+- Un usuario sin el rol de repartidor no puede acceder a pedidos asignados ni a comandos de reparto.
+- El bot muestra al repartidor solo los comandos permitidos para su rol.
+- La identidad del repartidor queda asociada a cada acción realizada sobre un pedido.
+
+### HU-REP-02. Recibir un pedido asignado
+
+Como repartidor, quiero recibir los pedidos que me asigne el administrador, para iniciar oportunamente el proceso de entrega.
+
+#### Criterios de aceptación
+
+- La asignación realizada en el panel genera una notificación al repartidor seleccionado.
+- La notificación identifica el número del pedido asignado.
+- Solo el repartidor con la asignación activa puede operar sobre el pedido.
+- Un pedido no asignado no aparece entre los pedidos activos del repartidor.
+
+### HU-REP-03. Consultar la información del pedido
+
+Como repartidor, quiero consultar el detalle del pedido asignado, para verificar qué productos debo transportar y el estado del pago.
+
+#### Criterios de aceptación
+
+- El bot muestra el número del pedido, platos, cantidades y total.
+- El bot informa si el pago está pendiente, observado o confirmado.
+- La información coincide con los datos visibles en el panel de administración.
+- Un cambio realizado en el pedido se refleja en la siguiente consulta del repartidor.
+
+### HU-REP-04. Consultar los datos del cliente y del destino
+
+Como repartidor, quiero consultar los datos del cliente y la ubicación de entrega, para comunicarme y llegar al destino correcto.
+
+#### Criterios de aceptación
+
+- El bot muestra el nombre y el contacto registrados del cliente.
+- El bot muestra la dirección y la referencia de entrega cuando estén disponibles.
+- El bot permite abrir la latitud y longitud del destino en un mapa.
+- Los datos solo son visibles para el repartidor con la asignación activa.
+- Un pedido sin ubicación válida no puede iniciar el trayecto de entrega.
+
+### HU-REP-05. Confirmar la recepción del pedido asignado
+
+Como repartidor, quiero confirmar que recibí el pedido asignado, para informar al administrador que iniciaré la entrega.
+
+#### Criterios de aceptación
+
+- El repartidor puede confirmar únicamente un pedido que tenga asignado.
+- La confirmación registra repartidor, pedido, fecha y hora.
+- El panel refleja la confirmación sin necesidad de volver a asignar el pedido.
+- Una segunda confirmación no crea eventos duplicados.
+- El administrador recibe una indicación de que el pedido fue aceptado.
+
+### HU-REP-06. Mantener una reasignación consistente
+
+Como repartidor, quiero que las reasignaciones se actualicen correctamente, para no operar sobre pedidos que ya corresponden a otro repartidor.
+
+#### Criterios de aceptación
+
+- Al reasignar un pedido, la asignación anterior deja de estar activa.
+- El repartidor anterior ya no puede actualizar la ubicación ni confirmar eventos del pedido.
+- El nuevo repartidor recibe una notificación con la información actualizada.
+- El historial conserva quién realizó la asignación, el repartidor anterior, el nuevo repartidor y la fecha y hora.
+- El pedido mantiene un único repartidor activo después de la reasignación.
+
+### HU-REP-07. Compartir la ubicación en tiempo real
+
+Como repartidor, quiero compartir mi ubicación en tiempo real durante el trayecto, para que el administrador pueda seguir la entrega.
+
+#### Criterios de aceptación
+
+- El bot acepta la ubicación en tiempo real compartida mediante Telegram.
+- Cada actualización se vincula al pedido y al repartidor activos.
+- La última ubicación recibida se refleja en el mapa del panel.
+- Una ubicación asociada a otro pedido o repartidor se rechaza.
+- El seguimiento termina cuando se confirma la entrega o se cancela la asignación.
+
+### HU-REP-08. Registrar el rastro de ubicación
+
+Como repartidor, quiero que el sistema conserve el rastro de mi ubicación, para disponer de evidencia del trayecto realizado.
+
+#### Criterios de aceptación
+
+- Cada punto válido almacena latitud, longitud, fecha y hora.
+- Cada punto queda asociado al pedido y al repartidor correspondientes.
+- Los puntos se consultan en orden cronológico.
+- Una actualización repetida con la misma marca temporal no crea un punto duplicado.
+- El historial permanece disponible después de finalizar la entrega.
+
+### HU-REP-09. Continuar después de una pérdida de señal
+
+Como repartidor, quiero que el seguimiento se recupere después de una pérdida de señal, para continuar la entrega sin perder el rastro anterior.
+
+#### Criterios de aceptación
+
+- Ante la falta de actualizaciones, el sistema conserva la última ubicación válida.
+- El panel indica cuándo dejó de recibirse una ubicación reciente.
+- La pérdida de señal no marca automáticamente el pedido como entregado ni cancelado.
+- Al recuperar la conexión, las nuevas ubicaciones continúan el rastro del mismo pedido.
+- El bot informa al repartidor si una actualización no pudo registrarse y permite reintentar.
+
+### HU-REP-10. Confirmar la llegada al destino
+
+Como repartidor, quiero confirmar mi llegada al destino, para informar que estoy en el punto de entrega.
+
+#### Criterios de aceptación
+
+- Solo el repartidor asignado puede confirmar la llegada.
+- La llegada registra pedido, repartidor, fecha, hora y ubicación disponible.
+- El evento de llegada se refleja en el panel y se notifica al cliente.
+- La llegada y la entrega se almacenan como eventos distintos.
+- La llegada debe registrarse antes de confirmar la entrega.
+
+### HU-REP-11. Confirmar la entrega con evidencia
+
+Como repartidor, quiero confirmar la entrega adjuntando evidencia, para dejar constancia verificable de que el pedido fue recibido.
+
+#### Criterios de aceptación
+
+- Solo el repartidor asignado puede confirmar la entrega.
+- La confirmación exige una evidencia en el formato permitido.
+- La evidencia queda asociada al pedido junto con la fecha, hora y repartidor.
+- Sin evidencia válida, el pedido no cambia al estado de entregado.
+- Al confirmar la entrega, el panel se actualiza y el cliente recibe una notificación.
+- Una entrega ya confirmada no puede registrarse nuevamente.
+
