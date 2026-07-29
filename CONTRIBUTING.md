@@ -1,8 +1,8 @@
-\# Guía de contribución
+# Guía de contribución
 
 
 
-\## Propósito
+## Propósito
 
 
 
@@ -18,11 +18,11 @@ y ser integrado mediante un Pull Request.
 
 
 
-\## Modelo de ramas
+## Modelo de ramas
 
 
 
-\### `main`
+### `main`
 
 
 
@@ -32,13 +32,13 @@ La rama `main` debe configurarse como rama protegida en GitHub.
 
 
 
-\- No se permiten commits directos.
+- No se permiten commits directos.
 
-\- No se permiten force-push.
+- No se permiten force-push.
 
-\- Solo recibe cambios mediante Pull Requests.
+- Solo recibe cambios mediante Pull Requests.
 
-\- Debe contener únicamente versiones funcionales.
+- Debe contener únicamente versiones funcionales.
 
 
 
@@ -52,7 +52,7 @@ La rama `main` debe configurarse como rama protegida en GitHub.
 
 
 
-\### `develop`
+### `develop`
 
 
 
@@ -60,13 +60,13 @@ Es la rama de integración del proyecto.
 
 
 
-\- Recibe los cambios terminados desde las ramas de trabajo.
+- Recibe los cambios terminados desde las ramas de trabajo.
 
-\- No se permiten commits directos.
+- No se permiten commits directos.
 
-\- Los cambios ingresan mediante Pull Requests.
+- Los cambios ingresan mediante Pull Requests.
 
-\- Sirve como base para crear nuevas ramas de trabajo.
+- Sirve como base para crear nuevas ramas de trabajo.
 
 
 
@@ -78,7 +78,7 @@ commits manuales sobre `main`.
 
 
 
-\## Ramas de trabajo
+## Ramas de trabajo
 
 
 
@@ -102,11 +102,11 @@ Donde:
 
 
 
-\- `tipo` puede ser `feature`, `fix` o `docs`.
+- `tipo` puede ser `feature`, `fix` o `docs`.
 
-\- `NN` es el número del issue asociado.
+- `NN` es el número del issue asociado.
 
-\- `descripcion-corta` resume el objetivo de la tarea.
+- `descripcion-corta` resume el objetivo de la tarea.
 
 
 
@@ -130,7 +130,7 @@ Las ramas de trabajo se eliminan después de fusionarse.
 
 
 
-\## Requisitos de los issues
+## Requisitos de los issues
 
 
 
@@ -138,21 +138,21 @@ Cada issue debe incluir:
 
 
 
-\- Un título accionable redactado como verbo más objeto.
+- Un título accionable redactado como verbo más objeto.
 
-\- Una descripción con el contexto y el alcance del cambio.
+- Una descripción con el contexto y el alcance del cambio.
 
-\- Criterios de aceptación verificables.
+- Criterios de aceptación verificables.
 
-\- Una label de tipo: `feat`, `bug` o `docs`.
+- Una label de tipo: `feat`, `bug` o `docs`.
 
-\- Una o ambas labels de parte, según el alcance: `parte:bot` y/o `parte:panel`.
+- Una o ambas labels de parte, según el alcance: `parte:bot` y/o `parte:panel`.
 
-\- El milestone correspondiente.
+- El milestone correspondiente.
 
-\- Una rama asociada con el formato `tipo/NN-descripcion-corta`.
+- Una rama asociada con el formato `tipo/NN-descripcion-corta`.
 
-\- Un Pull Request vinculado mediante `Closes #NN`.
+- Un Pull Request vinculado mediante `Closes #NN`.
 
 
 
@@ -162,7 +162,7 @@ asociado y nunca de forma manual.
 
 
 
-\## Flujo de trabajo por issue
+## Flujo de trabajo por issue
 
 
 
@@ -170,29 +170,29 @@ Cada cambio debe seguir este orden:
 
 
 
-1\. Crear un issue antes de comenzar el trabajo.
+1. Crear un issue antes de comenzar el trabajo.
 
-2\. Definir el contexto, alcance y criterios de aceptación.
+2. Definir el contexto, alcance y criterios de aceptación.
 
-3\. Asignar labels y milestone.
+3. Asignar labels y milestone.
 
-4\. Indicar la rama asociada.
+4. Indicar la rama asociada.
 
-5\. Crear la rama desde `develop`.
+5. Crear la rama desde `develop`.
 
-6\. Implementar únicamente el alcance del issue.
+6. Implementar únicamente el alcance del issue.
 
-7\. Crear commits con mensajes claros.
+7. Crear commits con mensajes claros.
 
-8\. Abrir un Pull Request hacia `develop`.
+8. Abrir un Pull Request hacia `develop`.
 
-9\. Vincular el Pull Request mediante `Closes #NN`.
+9. Vincular el Pull Request mediante `Closes #NN`.
 
-10\. Revisar los criterios de aceptación.
+10. Revisar los criterios de aceptación.
 
-11\. Realizar el merge mediante squash.
+11. Realizar el merge mediante squash.
 
-12\. Eliminar la rama de trabajo después del merge.
+12. Eliminar la rama de trabajo después del merge.
 
 
 
@@ -200,7 +200,7 @@ Los issues no deben cerrarse manualmente. Su cierre debe producirse mediante el 
 
 
 
-\## Convención de commits
+## Convención de commits
 
 
 
@@ -212,15 +212,15 @@ Se utilizarán los siguientes prefijos:
 
 
 
-\- `feat:` para nuevas funcionalidades.
+- `feat:` para nuevas funcionalidades.
 
-\- `fix:` para correcciones de errores.
+- `fix:` para correcciones de errores.
 
-\- `docs:` para cambios de documentación.
+- `docs:` para cambios de documentación.
 
-\- `refactor:` para reorganizar código sin cambiar su comportamiento.
+- `refactor:` para reorganizar código sin cambiar su comportamiento.
 
-\- `test:` para agregar o modificar pruebas.
+- `test:` para agregar o modificar pruebas.
 
 
 
@@ -244,7 +244,7 @@ test: agregar pruebas de validación de stock
 
 
 
-\## Pull Requests y revisión
+## Pull Requests y revisión
 
 
 
@@ -256,17 +256,17 @@ Cada Pull Request debe incluir:
 
 
 
-\- Una explicación de qué cambia.
+- Una explicación de qué cambia.
 
-\- La razón del cambio.
+- La razón del cambio.
 
-\- Instrucciones para probarlo.
+- Instrucciones para probarlo.
 
-\- Evidencia visual cuando corresponda.
+- Evidencia visual cuando corresponda.
 
-\- La referencia `Closes #NN` al issue asociado.
+- La referencia `Closes #NN` al issue asociado.
 
-\- Una checklist de revisión completada por el autor.
+- Una checklist de revisión completada por el autor.
 
 
 
@@ -280,4 +280,4 @@ Como el proyecto es individual, el autor también realiza la revisión del cambi
 
 
 
-El merge se realiza mediante \*\*Squash and merge\*\*, utilizando un mensaje limpio y descriptivo.
+El merge se realiza mediante **Squash and merge**, utilizando un mensaje limpio y descriptivo.
