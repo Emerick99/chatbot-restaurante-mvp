@@ -1,0 +1,22 @@
+# Configuración local y secretos
+.env
+.env.*
+!.env.example
+
+# Compilación y dependencias
+/build/
+/out/
+/vcpkg_installed/
+CMakeUserPresets.json
+
+# Datos generados durante la ejecución
+*.db
+*.db-shm
+*.db-wal
+/uploads/
+
+# Configuración local de editores
+/.vs/
+/.vscode/
+/.idea/
+.DS_Store

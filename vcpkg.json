@@ -1,0 +1,13 @@
+{
+  "name": "chatbot-restaurante-mvp",
+  "version-string": "0.1.0",
+  "dependencies": [
+    {
+      "name": "drogon",
+      "features": [
+        "sqlite3"
+      ]
+    },
+    "tgbot-cpp"
+  ]
+}
