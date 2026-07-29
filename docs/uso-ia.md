@@ -29,6 +29,8 @@
 
 | 2026-07-29 | Issue #14 / PR #27 | Documentar el flujo conversacional. | Flujos del cliente y repartidor con decisiones y diagrama. | Se contrastó con el Issue #14, `docs/requisitos.md` y la máquina de estados. | Se separaron conversación y pedido; se precisaron ubicación nativa y en vivo, cancelación, reinicio, reasignación, errores e idempotencia. |
 
+| 2026-07-29 | Issue #15 / PR #28 | Crear el diagrama de casos de uso. | Un diagrama con tres actores y veintiún casos de uso. | Se contrastó con el Issue #15 y `docs/requisitos.md`. | Se agruparon las funciones por actor, se marcó el límite del sistema y se añadieron reglas de acceso y trazabilidad. |
+
 ## Alcance de la asistencia de IA
 
 ChatGPT Codex ayudó a interpretar el enunciado, planificar tareas, revisar criterios y redactar o corregir documentación. Mediante el conector autorizado también ejecutó comentarios, asignaciones, ramas, cambios de archivos, Pull Requests y fusiones solicitadas hacia `develop`.
