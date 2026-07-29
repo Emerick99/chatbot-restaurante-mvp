@@ -19,6 +19,7 @@
 | 2026-07-29 | Issue #7 / PR #20 | Documentar alcance y actores. | Objetivo, componentes, responsabilidades y límites del MVP. | Se comparó con el Issue #7. | El postulante pidió corregir una frase ambigua sobre repartidores y registrar solo cambios reales; se aplicó. |
 | 2026-07-29 | Issue #8 / PR #21 | Redactar historias del cliente. | Doce historias con criterios verificables. | Se compararon con el Issue #8. | El postulante pidió declarar toda la ayuda de Codex, eliminar información ajena a esta columna y resumir el registro; se aplicaron esos cambios. |
 | 2026-07-29 | Issue #9 / PR #22 | Redactar y revisar historias del repartidor. | Once historias y observaciones sobre requisitos omitidos. | Se contrastaron con el Issue #9, el Bloque D y los libros base. | El postulante hizo notar que debían incorporarse los requisitos exactos; se precisaron mensaje completo, `Location`, acuse, reasignación, intervalo, pérdida de señal, evidencia y notificaciones. |
+| 2026-07-29 | Issue #10 / PR #23 | Redactar historias del administrador. | Doce historias con criterios verificables. | Se contrastaron con el Issue #10, el Bloque E y los libros base. | Se añadieron seguridad, CRUD, stock concurrente, tablero, pago, reparto, mapa, ficha de cliente y tres reportes. |
 
 ## Alcance de la asistencia de IA
 
