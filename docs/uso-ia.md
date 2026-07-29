@@ -29,6 +29,7 @@
 | 2026-07-29 | Issue #30 / PR #31 | Declarar dependencias C++ con vcpkg. | Un manifiesto con Drogon, SQLite3 y tgbot-cpp. | Se contrastó con las decisiones técnicas y los paquetes oficiales. | El postulante detectó que el PR agrupaba demasiados archivos; se redujo a las dependencias y este registro, dejando cada componente para un issue separado. |
 | 2026-07-29 | Issue #32 / PR #33 | Proteger secretos y artefactos locales. | Un `.gitignore` para entorno, compilación, SQLite, cargas y editores. | Se contrastó con el enunciado y se probaron los patrones con `git check-ignore`. | El postulante indicó mantener el avance granular; se limitó el PR a `.gitignore` y este registro. |
 | 2026-07-29 | Issue #34 / PR #35 | Documentar variables de entorno. | Una plantilla con siete valores de ejemplo. | Se verificaron nombres únicos, valores ficticios y ausencia de secretos. | El postulante indicó mantener el avance granular; se limitó el PR a `.env.example` y este registro. |
+| 2026-07-29 | Issue #43 / PR #93 | Implementar estados y transiciones del pedido. | Un modelo C++17 compartido con once estados y quince eventos. | Se contrastó con la máquina documentada y se compiló con advertencias estrictas. | Se añadieron conversión estable, cancelación, incidencia recuperable y rechazo sin cambios. |
 
 ## Alcance de la asistencia de IA
 
@@ -39,8 +40,6 @@ El postulante indicó las acciones, realizó observaciones y conserva la respons
 ## Dónde NO se usó IA
 
 La cuenta de GitHub, el repositorio y los comandos iniciales de Git Bash fueron creados o ejecutados manualmente por el postulante.
-
-Hasta esta actualización no se implementó código funcional del bot, del panel ni de la base de datos.
 
 ## Declaración
 
