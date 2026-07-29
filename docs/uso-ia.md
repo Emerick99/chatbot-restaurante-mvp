@@ -27,6 +27,7 @@
 | 2026-07-29 | Issue #15 / PR #28 | Crear el diagrama de casos de uso. | Un diagrama con tres actores y veintiún casos de uso. | Se contrastó con el Issue #15 y `docs/requisitos.md`. | Se agruparon las funciones por actor, se marcó el límite del sistema y se añadieron reglas de acceso y trazabilidad. |
 | 2026-07-29 | Issue #16 / PR #29 | Diseñar el modelo entidad-relación. | Dieciséis entidades con claves, cardinalidades y diagrama. | Se contrastó con el Issue #16, los requisitos y la máquina de estados. | Se normalizaron los perfiles, se conservaron precios históricos y se separaron asignaciones, rastros, pagos y eventos de entrega. |
 | 2026-07-29 | Issue #30 / PR #31 | Declarar dependencias C++ con vcpkg. | Un manifiesto con Drogon, SQLite3 y tgbot-cpp. | Se contrastó con las decisiones técnicas y los paquetes oficiales. | El postulante detectó que el PR agrupaba demasiados archivos; se redujo a las dependencias y este registro, dejando cada componente para un issue separado. |
+| 2026-07-29 | Issue #32 / PR #33 | Proteger secretos y artefactos locales. | Un `.gitignore` para entorno, compilación, SQLite, cargas y editores. | Se contrastó con el enunciado y se probaron los patrones con `git check-ignore`. | El postulante indicó mantener el avance granular; se limitó el PR a `.gitignore` y este registro. |
 
 ## Alcance de la asistencia de IA
 
