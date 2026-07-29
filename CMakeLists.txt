@@ -41,3 +41,25 @@ target_link_libraries(
 )
 
 include(CTest)
+
+if(BUILD_TESTING)
+    add_executable(
+        app_config_tests
+        tests/AppConfigTests.cpp
+        src/config/AppConfig.cpp
+    )
+    target_include_directories(
+        app_config_tests
+        PRIVATE
+            ${CMAKE_CURRENT_SOURCE_DIR}/src
+    )
+    target_link_libraries(
+        app_config_tests
+        PRIVATE
+            chatbot_project_options
+    )
+    add_test(
+        NAME app_config_tests
+        COMMAND app_config_tests
+    )
+endif()
