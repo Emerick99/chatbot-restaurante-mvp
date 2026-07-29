@@ -23,6 +23,8 @@
 
 | 2026-07-29 | Issue #11 / PR #24 | Registrar decisiones técnicas iniciales. | Seis decisiones con alternativas y consecuencias. | Se contrastaron con el Issue #11, el enunciado y la documentación oficial. | El postulante indicó que conoce C++ y no podría defender Python; se cambió la propuesta a C++17, Drogon, tgbot-cpp y SQLite3. |
 
+| 2026-07-29 | Issue #12 / PR #25 | Crear el README inicial. | Un borrador con propósito, alcance, componentes, actores y enlaces. | Se contrastó con el Issue #12 y `docs/requisitos.md`. | Se resumió el alcance y se enlazó únicamente la documentación existente. |
+
 ## Alcance de la asistencia de IA
 
 ChatGPT Codex ayudó a interpretar el enunciado, planificar tareas, revisar criterios y redactar o corregir documentación. Mediante el conector autorizado también ejecutó comentarios, asignaciones, ramas, cambios de archivos, Pull Requests y fusiones solicitadas hacia `develop`.
